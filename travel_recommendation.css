@@ -1,0 +1,403 @@
+/* Tropical adventure theme — turquoise / orange / sand */
+:root{
+  --turquoise: #17a2b8;
+  --deep-teal: #0e7a78;
+  --sunset: #ff8a65;
+  --sand: #f4e9d6;
+  --card-bg: rgba(255,255,255,0.95);
+  --glass: rgba(255,255,255,0.08);
+  --glass-strong: rgba(255,255,255,0.12);
+  --text-dark: #16323f;
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, "Segoe UI", system-ui, Arial, sans-serif;
+  color:var(--text-dark);
+  background: linear-gradient(180deg, rgba(23,162,184,0.08), rgba(255,138,101,0.03)), 
+              url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop') center/cover fixed no-repeat;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* NAV */
+.main-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 1.5rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.92));
+  border-bottom: 2px solid rgba(16,62,67,0.06);
+  position:sticky;
+  top:0;
+  z-index:40;
+  box-shadow: 0 6px 24px rgba(2,20,24,0.06);
+}
+.logo{
+  font-weight:800;
+  font-size:1.25rem;
+  color:var(--deep-teal);
+  letter-spacing:0.6px;
+}
+.nav-right a{
+  margin-left:1.25rem;
+  color:var(--deep-teal);
+  text-decoration:none;
+  font-weight:600;
+}
+.hamburger{
+  display:none;
+  background:transparent;
+  border: none;
+  color:var(--deep-teal);
+  font-size:1.1rem;
+  margin-left:0.75rem;
+}
+
+/* MAIN LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.page{padding:2.5rem 0}
+.page-title{font-size:1.8rem;color:var(--deep-teal);margin-bottom:.5rem}
+.subtitle{color:#355a5b;margin-bottom:1.5rem}
+
+/* HERO */
+.home-section .hero-content{
+  display:flex;
+  gap:2rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:2rem;
+}
+.hero-text{flex:1;max-width:720px}
+.hero-text h1{
+  font-size:2.6rem;
+  color:var(--deep-teal);
+  margin-bottom:.6rem;
+}
+.lead{font-size:1.05rem;color:#1f4a4a;margin-bottom:1rem}
+.hero-cta{display:flex;gap:.6rem;margin-top:1rem}
+#searchInput{
+  padding:.9rem 1rem;
+  border-radius:8px;
+  border:1px solid rgba(16,62,67,0.08);
+  width:100%;
+  font-size:1rem;
+}
+.search-btn, .clear-btn, .submit-button{
+  background: linear-gradient(180deg,var(--turquoise),var(--deep-teal));
+  color:white;border:none;padding:.9rem 1.1rem;border-radius:8px;font-weight:700;cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.clear-btn{background:linear-gradient(180deg,var(--sunset),#ff7a4a)}
+.search-btn:hover, .clear-btn:hover, .submit-button:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(14,122,120,0.18)}
+
+/* RESULTS SECTION (Search) */
+.results-section{margin-top:1.25rem}
+.results-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:1rem;
+}
+
+/* CARDS */
+.card, .rec-card, .result-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,233,214,0.95));
+  border-radius:12px;
+  padding:1rem;
+  box-shadow: 0 8px 30px rgba(2,20,24,0.05);
+  border:1px solid rgba(16,62,67,0.05);
+}
+.result-card img, .rec-card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:.8rem}
+.result-card h3{color:var(--deep-teal);margin-bottom:.4rem}
+.result-card p{color:#165055;font-size:.95rem}
+.visit-btn{display:block;width:100%;padding:.6rem;border-radius:8px;border:none;background:var(--turquoise);color:#fff;font-weight:700;margin-top:.6rem}
+
+/* ABOUT */
+.about-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.5rem}
+.card h3{color:var(--deep-teal);margin-bottom:.5rem}
+.values-list{list-style:disc;margin-left:1rem;color:#224a4a}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.team-member{text-align:center;padding:1rem}
+.avatar{font-size:2rem;margin-bottom:.5rem}
+.role{color:#0e7a78;font-weight:700;margin-bottom:.4rem}
+.bio{color:#2b4b4b}
+
+/* RECOMMENDATIONS */
+.rec-groups{display:grid;gap:1.25rem}
+.rec-block{margin-bottom:1rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem}
+.rec-card h4{color:var(--deep-teal);margin-top:.5rem}
+.rec-txt{color:#234b4b;font-size:.95rem}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:1rem}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:.75rem;border-radius:8px;border:1px solid rgba(16,62,67,0.06);margin-bottom:.7rem;font-size:1rem;
+}
+.info-row{display:flex;gap:.8rem;align-items:flex-start;margin-bottom:1rem}
+.info-row i{color:var(--deep-teal);font-size:1.1rem;min-width:30px}
+.muted{color:#3b5e5e}
+
+/* FOOTER */
+.site-footer{background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,233,214,0.95));padding:1rem 0;margin-top:2rem;border-top:1px solid rgba(16,62,67,0.04)}
+.site-footer p{color:#224a4a;text-align:center;font-weight:600}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .home-section .hero-content{flex-direction:column;align-items:flex-start;padding:1rem}
+  .contact-grid{grid-template-columns:1fr}
+  .hamburger{display:inline-block}
+  .nav-right{display:none}
+  .nav-right.show{display:flex;flex-direction:column;gap:.6rem;padding:.75rem}
+}
+
+/* NAVBAR SEARCH BAR */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+#searchInput {
+  padding: 0.45rem 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: rgba(23, 162, 184, 0.25); /* semi-transparent turquoise */
+  color: white;
+  width: 160px;
+}
+
+#searchInput::placeholder {
+  color: #e0f7fa;
+}
+
+.search-btn,
+.clear-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.search-btn {
+  background: linear-gradient(180deg, var(--turquoise), var(--deep-teal));
+}
+
+.clear-btn {
+  background: linear-gradient(180deg, var(--sunset), #ff7a4a);
+}
+
+/* NAVBAR LINK STYLING RESTORE */
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-center a:hover {
+  color: var(--sand); /* soft beige tone for hover */
+  transform: translateY(-2px);
+}
+
+.main-nav {
+  background: rgba(14, 122, 120, 0.9); /* semi-transparent turquoise background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+/* ============================= */
+/* ✨ UNIVERSAL CARD STYLING ✨  */
+/* ============================= */
+.card,
+.rec-card,
+.result-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,233,214,0.95));
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(14, 122, 120, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle hover elevation & glow */
+.card:hover,
+.rec-card:hover,
+.result-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(14, 122, 120, 0.25);
+  border-color: rgba(14, 122, 120, 0.35);
+}
+
+/* Decorative gradient bar on hover */
+.card::before,
+.rec-card::before,
+.result-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--turquoise), var(--sunset));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card:hover::before,
+.rec-card:hover::before,
+.result-card:hover::before {
+  opacity: 1;
+}
+
+/* Image styling inside cards */
+.card img,
+.rec-card img,
+.result-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Slight zoom-in and glow on hover */
+.card:hover img,
+.rec-card:hover img,
+.result-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Titles and text refinement */
+.card h3,
+.rec-card h4,
+.result-card h3 {
+  color: var(--deep-teal);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.card p,
+.rec-card p,
+.result-card p {
+  color: #164b4e;
+  line-height: 1.4;
+  font-size: 0.97rem;
+}
+
+/* Smooth hover transition for buttons in cards */
+.visit-btn {
+  background: var(--turquoise);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  transition: all 0.25s ease;
+}
+
+.visit-btn:hover {
+  background: var(--deep-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(14, 122, 120, 0.3);
+}
+
+/* ============================= */
+/* 🧭 MEET THE CREW - TEAM CARDS */
+/* ============================= */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.team-member {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 233, 214, 0.95));
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(14, 122, 120, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover lift and glow */
+.team-member:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(14, 122, 120, 0.25);
+  border-color: rgba(14, 122, 120, 0.3);
+}
+
+/* Gradient bar animation on hover */
+.team-member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--turquoise), var(--sunset));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.team-member:hover::before {
+  opacity: 1;
+}
+
+/* Avatar styling */
+.avatar {
+  font-size: 2.5rem;
+  margin-bottom: 0.6rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+.team-member:hover .avatar {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Name and role */
+.team-member h4 {
+  color: var(--deep-teal);
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+.team-member .role {
+  color: var(--turquoise);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.team-member .bio {
+  color: #17484a;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

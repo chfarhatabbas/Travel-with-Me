@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel With Me — Adventure Awaits</title>
+  <link rel="stylesheet" href="travel_recommendation.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23FF8A65'/%3E%3Ctext x='50' y='58' font-size='40' text-anchor='middle' fill='%23fff' font-family='Segoe UI, Arial'%3E✈%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <nav class="main-nav">
+  <div class="nav-left">
+    <div class="logo">Travel With Me</div>
+  </div>
+
+  <div class="nav-center" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#recs">Recommendations</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+
+  <div class="nav-right">
+    <input id="searchInput" type="text" placeholder="Search..." aria-label="Search destinations" />
+    <button id="searchBtn" class="search-btn">Search</button>
+    <button id="clearBtn" class="clear-btn">Reset</button>
+  </div>
+</nav>
+
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page home-section">
+      <!-- <div class="hero-content">
+        <div class="hero-text">
+          <h1>Chase the Sun. Find the Story.</h1>
+          <p class="lead">
+            We design small-group adventures and solo escapes that blend breathtaking nature,
+            local culture, and joyful discovery. Whether you crave turquoise beaches,
+            ancient temples, or highland trails — Travel With Me turns plans into memories.
+          </p>
+
+          <div class="hero-cta">
+            <!-- Search input inside Home -->
+            <!-- <input id="searchInput" type="text" placeholder="Search beaches, temples, or countries..." aria-label="search destinations">
+            <button id="searchBtn" class="search-btn">Search</button>
+            <button id="clearBtn" class="clear-btn">Reset</button>
+          </div>
+        </div> --> -->
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="badge " style="color: white;">Tropical · Cultural · Wild</div>
+        </div>
+      </div>
+
+      <div id="resultsSection" class="results-section" style="display:none">
+        <div id="resultsGrid" class="results-grid"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page about-section">
+      <div class="container">
+        <h2 class="page-title">About Travel With Me</h2>
+       <p class="subtitle" style="color: white;">
+  Curated journeys for curious travelers — sustainable, spirited, and surprising.
+</p>
+
+        <div class="about-cards">
+          <article class="card">
+            <h3>Who We Are</h3>
+            <p>
+              Travel With Me is a boutique expedition studio founded by explorers who wanted travel to feel
+              more human. We focus on small groups, local hosts, and low-impact itineraries that leave places
+              better than we found them.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Our Mission</h3>
+            <p>
+              Make bold travel accessible: create immersive trips that connect people to place through food,
+              storytelling, and active experiences — from coastal snorkeling to temple dawn ceremonies.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Our Values</h3>
+            <ul class="values-list">
+              <li>Respect for local cultures</li>
+              <li>Leave-no-trace exploration</li>
+              <li>Small groups, big experiences</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="team-wrap">
+          <h3 class="section-heading">Meet the Crew</h3>
+          <p class="team-intro" style="color: white;">Our guides and planners are locals, story hunters, and outdoor pros who love sharing the wild side of their home.</p>
+
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="avatar">🌊</div>
+              <h4>Amir Rahman</h4>
+              <p class="role">Founder & Expedition Lead</p>
+              <p class="bio">Amir grew up on coastal islands and leads sea, jungle and cultural trips across South Asia.</p>
+            </div>
+
+            <div class="team-member">
+              <div class="avatar">🗺️</div>
+              <h4>Priya Desai</h4>
+              <p class="role">Head Planner</p>
+              <p class="bio">Priya builds itineraries focused on slow travel and authentic encounters with local artisans.</p>
+            </div>
+
+            <div class="team-member">
+              <div class="avatar">🏔️</div>
+              <h4>Marco Santos</h4>
+              <p class="role">Lead Guide</p>
+              <p class="bio">Marco is a mountain guide who knows routes, hidden hot springs, and the best sunrise viewpoints.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section id="recs" class="page recs-section">
+      <div class="container">
+        <h2 class="page-title">Handpicked Recommendations</h2>
+        <p class="subtitle" style="color: white;">Quick picks based on top interests — beaches, temples, and countries to explore.</p>
+        <div class="rec-groups">
+          <!-- Beaches -->
+          <div class="rec-block">
+            <h3>Beach Escapes</h3>
+            <div class="card-grid">
+              <div class="rec-card card">
+                <img src="https://www.greeceholidays.info/wp-content/uploads/sites/128/crete-elafonissi.jpg" alt="Elafonissi Beach">
+                <h4>Elafonissi Beach</h4>
+                <p class="rec-txt">Elafonissi Beach in Crete, Greece, known for its unique pink sand and shallow turquoise lagoon, and Whitehaven Beach in Australia.</p>
+              </div>
+
+              <div class="rec-card card">
+                <img src="https://s7ap1.scene7.com/is/image/destqueensland/teq/consumer/global/images/destinations/the-whitsundays/blog-imges/2020_WYS_WhitehavenBeach_Beaches_JamesVodicka_142946.jpg?bfc=on&fit=wrap&fmt=webp&qlt=100&resMode=bisharp&wid=1200" alt="Whitehaven Beach">
+                <h4>Whitehaven Beach</h4>
+                <p class="rec-txt">Whitehaven Beach, located on Whitsunday Island in Australia, is a famous beach known for its 98–99% pure silica sand, which is brilliant white, soft, and stays cool under the sun.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Temples -->
+          <div class="rec-block">
+            <h3>Temple & Heritage</h3>
+            <div class="card-grid">
+              <div class="rec-card card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq_M0smaOj1QyCXHQB5h7KMrCqcHaqahxcXA&s" alt="Sri Ranganathaswamy Temple">
+                <h4>Sri Ranganathaswamy Temple</h4>
+                <p class="rec-txt">The Ranganathaswamy temple or Sri Ranganathaswamy temple in Srirangapatna, in the Mandya district of Karnataka state, India, is dedicated to the Hindu god Ranganatha (a manifestation of Vishnu). The temple is classified one among the 108 Abhimana Kshethram of Vaishnavate tradition.</p>
+              </div>
+
+              <div class="rec-card card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ei1b1PC0KxdBKQ3ILFspUtizCQVc9NvWZw&s" alt="Angkor Wat temple">
+                <h4>Angkor Wat temple</h4>
+                <p class="rec-txt">The temple is admired for the grandeur and harmony of the architecture, its extensive bas-reliefs and devatas adorning its walls. The Angkor area was designated as a UNESCO World Heritage Site in 1992.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Countries -->
+          <div class="rec-block">
+            <h3>Country Highlights</h3>
+            <div class="card-grid">
+              <div class="rec-card card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz2V8AkJMQfUFykTLRWjbuW7SWSJdzD_P1wQ&s" alt="France">
+                <h4>France</h4>
+                <p class="rec-txt">France is the world's most visited country, welcoming over 100 million international tourists in 2023 and 2024 due to its rich culture, diverse landscapes, world-class gastronomy, and numerous UNESCO World Heritage sites.</p>
+              </div>
+
+              <div class="rec-card card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJE0sccxgy3SblVHqiy44AIAbzqQVsRiJKuQ&s" alt="Spain">
+                <h4>Spain</h4>
+                <p class="rec-txt">Spain is one of the world's leading tourist destinations, consistently ranking as one of the most visited countries due to its rich culture, natural beauty, and excellent tourism infrastructure.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page contact-section">
+      <div class="container">
+        <h2 class="page-title">Contact Us</h2>
+        <p class="subtitle" style="color: white;">Questions, group trips, or custom requests? Send us a note — we reply within 24 hours.</p>
+
+        <div class="contact-grid">
+          <div class="contact-form card">
+            <h3>Send a Message</h3>
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+              <label for="name">Name *</label>
+              <input id="name" name="name" required placeholder="Your full name" />
+
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us what you want to explore..."></textarea>
+
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info card">
+            <h3>Reach Us</h3>
+            <p class="muted">Office & reservations</p>
+
+            <div class="info-row">
+              <i class="fa fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <p>hello@travelwithme.co</p>
+                <p>reservations@travelwithme.co</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="fa fa-phone"></i>
+              <div>
+                <strong>Phone</strong>
+                <p>+92 300 1234567</p>
+                <p>+92 300 7654321</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="fa fa-map-marker-alt"></i>
+              <div>
+                <strong>Address</strong>
+                <p>28 Wander Lane</p>
+                <p>Cliffside Quarter, Karachi</p>
+                <p>Pakistan</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <i class="fa fa-clock"></i>
+              <div>
+                <strong>Hours</strong>
+                <p>Mon — Sat: 09:00 — 18:00</p>
+                <p>Sun: Limited support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Travel With Me — Crafted journeys for curious people.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
