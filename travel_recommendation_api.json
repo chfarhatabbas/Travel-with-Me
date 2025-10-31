@@ -1,0 +1,48 @@
+{
+  "beaches": [
+    {
+      "id": "b1",
+      "name": "Elafonissi Beach",
+      "country": "Greece",
+      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80",
+      "description": "Elafonissi Beach in Crete, Greece, known for its pink sand and shallow turquoise lagoon."
+    },
+    {
+      "id": "b2",
+      "name": "Whitehaven Beach",
+      "country": "Australia",
+      "imageUrl": "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=900&q=80",
+      "description": "Whitehaven Beach, located on Whitsunday Island in Australia, famous for its 99% pure white silica sand."
+    }
+  ],
+  "temples": [
+    {
+      "id": "t1",
+      "name": "Sri Ranganathaswamy Temple",
+      "country": "India",
+      "imageUrl": "https://images.unsplash.com/photo-1561484930-2b7f2bba4b24?w=900&q=80",
+      "description": "A grand Hindu temple in Srirangapatna dedicated to Lord Ranganatha, an incarnation of Vishnu."
+    },
+    {
+      "id": "t2",
+      "name": "Angkor Wat",
+      "country": "Cambodia",
+      "imageUrl": "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=900&q=80",
+      "description": "The largest religious monument in the world, admired for its intricate architecture and carvings."
+    }
+  ],
+  "countries": [
+    {
+      "id": "c1",
+      "name": "France",
+      "imageUrl": "https://images.unsplash.com/photo-1519121788458-1a43f54a26a7?w=900&q=80",
+      "short": "France is known for its art, cuisine, and rich history, from Paris to Provence."
+    },
+    {
+      "id": "c2",
+      "name": "Spain",
+      "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80",
+      "short": "Spain offers diverse landscapes, Mediterranean beaches, and a vibrant cultural heritage."
+    }
+  ]
+}
